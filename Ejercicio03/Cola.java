@@ -60,4 +60,15 @@ public class Cola<T> {
     }
     return tamano;
     }
+    public String toString(){
+         String str = "";
+         Node<T> aux = nodopr;  
+        for(int i=0;i<tamaño();i++){        
+        
+         str += aux.getValor()+"\n";
+         aux=aux.getProximo();
+
+        }
+     return str;
+    }
 }
