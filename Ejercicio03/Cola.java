@@ -1,9 +1,33 @@
-import java.util.LinkedList;
+import java.util.*;
 
 public class Cola<T> {
-    
-    private LinkedList<T> colas;
+
+    private Node<T> nodopr;
+    private Node<T> nodoul;
 
     public Cola() {
-        colas = new LinkedList<>();
+        nodopr=null;
+        nodoul=null;
     }
+    
+    public boolean vacia(){
+        return nodopr == null;
+    }
+
+    public void añadirCola(T valor){
+
+        Node<T> nodNuevo = new Node<>(valor);
+        if(vacia()){
+
+            nodopr=nodNuevo;
+            nodoul = nodNuevo;
+
+        }else{
+           nodoul.setNextNode(nodNuevo);
+           nodoul = nodNuevo;
+
+
+        }
+
+    }
+}
