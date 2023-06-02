@@ -25,9 +25,39 @@ public class Cola<T> {
         }else{
            nodoul.setNextNode(nodNuevo);
            nodoul = nodNuevo;
-
-
         }
 
+    }
+    public T eliminarCola(){
+
+        if(vacia()){
+
+            throw new NoSuchElementException("No se puede eliminar esta vacia");
+
+        }
+        T elemento = nodopr.getData();
+        nodopr=nodopr.getNextNode();
+
+        if(nodopr == null){
+           nodoul=null;
+        }
+        return elemento;
+    }
+    public T obtenerCabeza(){
+
+        if(vacia()){
+           throw new NoSuchElementException("Cola vacia");
+        }
+        return nodopr.getData();
+    }
+    public int tamaño(){
+        int tamano=0;
+    Node<T> nodo = nodopr.pr;
+    while(nodo != null){
+
+        tamano++;
+        nodo = nodo.getNextNode();
+    }
+    return tamano;
     }
 }
