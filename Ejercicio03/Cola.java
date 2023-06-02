@@ -50,6 +50,13 @@ public class Cola<T> {
         }
         return nodopr.getValor();
     }
+    public T obtenerUltimo(){
+
+        if(vacia()){
+           throw new NoSuchElementException("Cola vacia");
+        }
+        return nodoul.getValor();
+    }
     public int tamaño(){
         int tamano=0;
     Node<T> nodo = nodopr;
