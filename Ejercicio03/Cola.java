@@ -23,7 +23,7 @@ public class Cola<T> {
             nodoul = nodNuevo;
 
         }else{
-           nodoul.setNextNode(nodNuevo);
+           nodoul.setProximo(nodNuevo);
            nodoul = nodNuevo;
         }
 
@@ -35,8 +35,8 @@ public class Cola<T> {
             throw new NoSuchElementException("No se puede eliminar esta vacia");
 
         }
-        T elemento = nodopr.getData();
-        nodopr=nodopr.getNextNode();
+        T elemento = nodopr.getValor();
+        nodopr=nodopr.getProximo();
 
         if(nodopr == null){
            nodoul=null;
@@ -48,15 +48,15 @@ public class Cola<T> {
         if(vacia()){
            throw new NoSuchElementException("Cola vacia");
         }
-        return nodopr.getData();
+        return nodopr.getValor();
     }
     public int tamaño(){
         int tamano=0;
-    Node<T> nodo = nodopr.pr;
+    Node<T> nodo = nodopr;
     while(nodo != null){
 
         tamano++;
-        nodo = nodo.getNextNode();
+        nodo = nodo.getProximo();
     }
     return tamano;
     }
