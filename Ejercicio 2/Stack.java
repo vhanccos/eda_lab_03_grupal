@@ -6,8 +6,8 @@ public class Stack<T> {
 		this.root = null;
 	}
 	
-	public void push(T x) {
-		
+	public void push(T x) { // colocamos un nuevo elemento a la cima
+		this.root = new Node<T>(x,this.root);
 	}
 	public T pop() {
 	}
