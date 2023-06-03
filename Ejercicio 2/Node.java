@@ -10,10 +10,16 @@ public class Node<T> {
 		this.dato = dato;
 		this.nextNode = null;
 	}
-	public getDato(){
+	public T getDato(){
 		return this.dato;
 	}
-	public setDato(T dato){
+	public void setDato(T dato){
 		this.dato = dato;
+	}
+	public Node<T> getNext(){
+		return this.nextNode;
+	}
+	public void setNext(Node<T> nextNode){
+		this.nextNode = nextNode;
 	}
 }
