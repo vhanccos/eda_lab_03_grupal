@@ -10,6 +10,14 @@ public class StackNodo<T> {
 		this.root = new Node<T>(x,this.root);
 	}
 	public T pop() {
+		if (isEmpty()) {
+			throw new NoSuchElementException("¡No hay elementos en la pila!"); 
+		}
+		else {// "desconectamos" a nuestro tope/cima y devolvemos el valor de esta
+			T datoAux = this.root.getDato();
+			this.root = this.root.getNext();
+			return datoAux;	
+		}
 	}
 	public T peek() { // top , devuelve el valor en la cima (NO lo borra)
 		if (isEmpty()) {
