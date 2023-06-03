@@ -7,7 +7,10 @@ public class Ejercicio2 {
 		//gente.peek(); -> suelta el error no hay espacio en la pila
 		gente.push(new Persona());
 		gente.push(new Persona(10,"Camilo"));
-		System.out.println(gente);
-		System.out.println(gente.peek());
+		gente.push(new Persona(30,"Italo"));
+		System.out.println("Datos: "+gente);
+		System.out.println("Dato en la cima: "+gente.peek());
+		System.out.println("Eliminamos a "+gente.pop());
+		System.out.println("Datos: "+gente);
 	}
 }

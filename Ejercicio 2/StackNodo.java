@@ -34,9 +34,10 @@ public class StackNodo<T> {
 		return this.root == null;
 	}
 	public String toString() {
-		String str = "";
-		for (Node<T> i = this.root; i != null; i = i.getNext()) // recorre todos los nodos siempre y cuando contengan un elemento
-			str += i.toString() + ", ";
+		String str = "[";
+		for (Node<T> i = this.root; i != null; i = i.getNext()) { // recorre todos los nodos siempre y cuando contengan un elemento
+			str += i.toString() + "],[";
+		}
 		return str;
 	}
 }

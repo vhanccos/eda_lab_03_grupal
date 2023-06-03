@@ -24,7 +24,7 @@ public class Persona {
 		return edad;
 	}
 	public String toString() {
-		return "[Nombre: "+nombre+", Edad: "+edad+"]";
+		return nombre+", "+"Edad: "+edad;
 	}
 
 }
