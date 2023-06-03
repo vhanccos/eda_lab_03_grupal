@@ -2,6 +2,10 @@ public class Stack<T> {
 	
 	private Node<T> root;
 	
+	public Stack() {
+		this.root = null;
+	}
+	
 	public void push(T x) {
 		
 	}
