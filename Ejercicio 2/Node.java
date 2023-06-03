@@ -10,4 +10,10 @@ public class Node<T> {
 		this.dato = dato;
 		this.nextNode = null;
 	}
+	public getDato(){
+		return this.dato;
+	}
+	public setDato(T dato){
+		this.dato = dato;
+	}
 }
