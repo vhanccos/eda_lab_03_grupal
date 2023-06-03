@@ -7,9 +7,12 @@ public class Stack<T> {
 	}
 	public T pop() {
 	}
-	public T top() {
+	public T peek() { // top
 	}
-	public boolean isEmpty() {
+	public int search(T o) {
+		
+	}
+	public boolean isEmpty() { // empty
 		
 	}
 }
