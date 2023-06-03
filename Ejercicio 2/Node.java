@@ -22,4 +22,7 @@ public class Node<T> {
 	public void setNext(Node<T> nextNode){
 		this.nextNode = nextNode;
 	}
+	public String toString() {
+		return this.dato.toString();
+	}
 }
