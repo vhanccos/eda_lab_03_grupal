@@ -11,13 +11,19 @@ public class StackNodo<T> {
 	}
 	public T pop() {
 	}
-	public T peek() { // top
+	public T peek() { // top , devuelve el valor en la cima (NO lo borra)
+		if (isEmpty()) {
+			throw new NoSuchElementException("¡No hay elementos en la pila!"); 
+		}
+		else {
+			return this.root.getDato();
+		}
 	}
 	public int search(T o) {
 		
 	}
 	public boolean isEmpty() { // empty
-		
+		return this.root == null;
 	}
 	public String toString() {
 		String str = "";
