@@ -1,4 +1,4 @@
-public class Node<T> {
+public class Node<T extends Comparable <T>> {
 	private T dato;
 	private Node<T> nextNode;
 
@@ -25,4 +25,8 @@ public class Node<T> {
 	public String toString() {
 		return this.dato.toString();
 	}
+	public int compareTo(T x) {
+		return this.dato.compareTo(x);
+	}
+	
 }

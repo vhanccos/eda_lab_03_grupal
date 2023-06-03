@@ -1,4 +1,4 @@
-public class Persona {
+public class Persona implements Comparable<Persona>{
 	
 	private int edad;
 	private String nombre;
@@ -22,6 +22,12 @@ public class Persona {
 	}
 	public int getEdad() {
 		return edad;
+	}
+	public int compareTo(Persona x) {
+		if (this.nombre.equals(x.getNombre()) && (this.edad == x.getEdad())) {
+			return 0;// es igual
+		}
+		return -1;// no es igual
 	}
 	public String toString() {
 		return nombre+", "+"Edad: "+edad;

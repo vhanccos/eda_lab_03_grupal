@@ -1,6 +1,6 @@
-public class StackNodo<T> {
+public class StackNodo<T extends Comparable <T>> {
 	
-	private Node<T> root;
+	private Node<T> root; // tope o cima de la pila
 	
 	public StackNodo() {
 		this.root = null;
@@ -27,7 +27,15 @@ public class StackNodo<T> {
 			return this.root.getDato();
 		}
 	}
-	public int search(T o) {
+	public int search(T x) {// recorre todos los nodos siempre que existan, se detiene cuando uno es igual y retorna 1, en todo caso retorna -1
+		Node<T> aux = this.root;
+		for(/* */ ; aux != null && !(aux.compareTo(x)==0) ;  aux = aux.getNext());
+		if (aux != null) {
+			return 1; // ha encontrado al elemento
+		}
+		else {
+			return -1; // no lo encontro
+		}
 		
 	}
 	public boolean isEmpty() { // empty
